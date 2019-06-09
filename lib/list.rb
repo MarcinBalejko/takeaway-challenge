@@ -9,7 +9,6 @@ class List
     end
     def select(dish)
         @selected_dishes[dish] = @menu[dish]
-        
     end
 
 end

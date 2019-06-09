@@ -1,6 +1,6 @@
 require './lib/list.rb'
 describe List do
-    it 'has menu' do
+    it 'has a menu' do
         expect(subject).to respond_to(:menu)
     end
     describe '#add_dish' do
