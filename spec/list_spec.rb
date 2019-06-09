@@ -21,9 +21,9 @@ describe List do
             expect(subject).to respond_to(:select).with(1).argument
         end
         it 'selected dishes are stored' do
-            subject.add_dish("pizza", 10)
-            subject.select("pizza")
-            expect(subject.selected_dishes.flatten[-2]).to eq "pizza"
+            subject.add_dish(dish)
+            subject.select(dish)
+            expect(subject.selected_dishes.flatten[0]).to eq dish
         end
     end
 
