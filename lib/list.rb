@@ -1,8 +1,8 @@
 class List
-    attr_reader :dishes, :menu
+    attr_reader :menu
     def initialize
-        @dishes = []
         @menu = {}
     end
+
 
 end
