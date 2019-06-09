@@ -15,6 +15,15 @@ describe List do
         it 'responds to select' do
             expect(subject).to respond_to(:select)
         end
+        it 'user can select certain dishes from the menu' do
+            subject.add_dish("pizza", 10)
+            expect(subject).to respond_to(:select).with(1).argument
+        end
+        it 'selected dishes are stored' do
+            subject.add_dish("pizza", 10)
+            subject.select("pizza")
+            expect(subject.selected_dishes.flatten[-2]).to eq "pizza"
+        end
     end
 
 end
