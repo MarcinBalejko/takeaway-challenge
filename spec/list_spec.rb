@@ -1,14 +1,15 @@
 require './lib/list.rb'
 describe List do
+    
+    let(:dish) { Dish.new("pizza", 10) }
+
     it 'has a menu' do
         expect(subject).to respond_to(:menu)
     end
     describe '#add_dish' do
         it 'can add dish to the menu' do
-            dish = "pizza"
-            price = 10
-            subject.add_dish(dish, 10)
-            expect(subject.menu.flatten[-2]).to eq dish
+            subject.add_dish(dish)
+            expect(subject.menu.flatten[0]).to eq dish.name?
         end
     end
     describe '#select' do
