@@ -23,7 +23,7 @@ describe List do
         it 'selected dishes are stored' do
             subject.add_dish(dish)
             subject.select(dish)
-            expect(subject.selected_dishes.flatten[0]).to eq dish
+            expect(subject.selected_dishes[0]).to eq dish
         end
     end
 
