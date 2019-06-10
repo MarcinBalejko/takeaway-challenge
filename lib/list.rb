@@ -20,5 +20,10 @@ class List
         end
         total_sum    
     end
+    def confirm
+        time = Time.new
+        delivery_time = time + 3600
+        "Thank you! Your order was placed and will be delivered before #{delivery_time}"
+    end
 
 end
