@@ -26,5 +26,10 @@ describe List do
             expect(subject.selected_dishes[0]).to eq dish
         end
     end
+    describe '#total' do
+        it 'responds to total' do
+            expect(subject).to respond_to(:total)
+        end
+    end
 
 end

@@ -13,6 +13,8 @@ class List
     def select(dish)
         @selected_dishes << dish
     end
-    
+    def total
+        
+    end
 
 end
