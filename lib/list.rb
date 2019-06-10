@@ -14,7 +14,11 @@ class List
         @selected_dishes << dish
     end
     def total
-        
+        total_sum = 0
+        @selected_dishes.each do |x|
+            total_sum = x.price? + total_sum
+        end
+        total_sum    
     end
 
 end

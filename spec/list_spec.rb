@@ -30,6 +30,12 @@ describe List do
         it 'responds to total' do
             expect(subject).to respond_to(:total)
         end
+        it 'shows the total amount to pay' do
+            subject.add_dish(dish)
+            2.times { subject.select(dish) }
+            expect(subject.total).to eq(20)
+        end  
+        
     end
 
 end
