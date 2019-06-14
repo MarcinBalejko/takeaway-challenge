@@ -2,9 +2,10 @@ require_relative 'dish'
 require_relative 'order'
 class Takeaway
     attr_reader :menu, :selected_dishes
-    def initialize
+    def initialize(order=Order.new)
         @menu = {}
         @selected_dishes = []
+        @order = order
     end
     def add_dish(dish)
         name = dish.name?
