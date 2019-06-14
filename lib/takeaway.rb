@@ -4,7 +4,7 @@ class Takeaway
     attr_reader :menu, :selected_dishes, :order
     def initialize(order = Order.new)
         @menu = {}
-        @selected_dishes = []
+        @selected_dishes = order.ordered_dishes
         @order = order
     end
     def add_dish(dish)
