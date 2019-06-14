@@ -1,5 +1,5 @@
-require './lib/list.rb'
-describe List do
+require './lib/takeaway.rb'
+describe Takeaway do
     
     let(:dish) { Dish.new("pizza", 10) }
 

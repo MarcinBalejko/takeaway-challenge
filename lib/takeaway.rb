@@ -1,5 +1,5 @@
 require_relative 'dish'
-class List
+class Takeaway
     attr_reader :menu, :selected_dishes
     def initialize
         @menu = {}

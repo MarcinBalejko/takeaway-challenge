@@ -1,4 +1,4 @@
-require_relative 'list'
+require_relative 'takeaway'
 class Dish
     attr_reader :name, :price
     def initialize(name, price)
