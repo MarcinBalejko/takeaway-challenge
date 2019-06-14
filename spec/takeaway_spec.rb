@@ -6,6 +6,9 @@ describe Takeaway do
     it 'has a menu' do
         expect(subject).to respond_to(:menu)
     end
+    it 'instantiates a new order' do
+        expect(subject).to respond_to(:order)
+    end
     describe '#add_dish' do
         it 'can add dish to the menu' do
             subject.add_dish(dish)
