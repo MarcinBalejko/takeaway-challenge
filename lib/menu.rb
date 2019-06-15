@@ -1,5 +1,4 @@
 require_relative 'takeaway'
-require_relative 'dish'
 class Menu
     attr_reader :order, :offer, :calculator
     def initialize(offer = {'pizza' => 10, 'lasagne' =>20, 'spaghetti' => 25 }, order = [])
