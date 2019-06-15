@@ -1,13 +1,16 @@
 require_relative 'takeaway'
+require_relative 'dish'
 class Menu
-    attr_reader :our_offer
-    def initialize
-        @our_offer = [
-            pizza = Dish.new("pizza", 10),
-            lasagne = Dish.new("lasagne", 20),
-            spaghetti = Dish.new("spaghetti", 15),
-            bigos = Dish.new("bigos", 15),
-            pierogi = Dish.new("pierogi", 30)
-        ]       
+    attr_reader :order, :offer, :calculator
+    def initialize(offer = {'pizza' => 10, 'lasagne' =>20, 'spaghetti' => 25 }, order = [])
+        @offer = offer
+        @order = order
+        @calculator = []
     end
+    def select(dish)
+        if @offer.include?(dish)
+            @calculator << @offer[dish]
+            @order << dish
+        end
+    end 
 end
