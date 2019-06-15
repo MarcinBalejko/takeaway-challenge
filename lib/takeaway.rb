@@ -1,20 +1,18 @@
 require_relative 'dish'
 require_relative 'order'
 class Takeaway
-    attr_reader :menu, :selected_dishes, :order
-    def initialize(order = Order.new)
+    attr_reader :menu, :selected_dishes, :order, :sms
+    def initialize(order = Order.new, sms: nil)
         @menu = {}
         @selected_dishes = order.ordered_dishes
         @order = order
+        @sms = sms
     end
     def add_dish(dish)
         name = dish.name?
         price = dish.price?
         @menu[name] = price
     end
-    #def select(dish)
-     #   @selected_dishes << dish
-    #end
     def total
         total_sum = 0
         @selected_dishes.each do |x|
