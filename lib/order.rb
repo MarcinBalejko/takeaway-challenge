@@ -5,7 +5,8 @@ class Order
     def initialize
         @ordered_dishes = []
     end
-    def select_from_menu(dish)
+    def select(dish)
         @ordered_dishes << dish
     end
+    
 end

@@ -12,9 +12,9 @@ class Takeaway
         price = dish.price?
         @menu[name] = price
     end
-    def select(dish)
-        @selected_dishes << dish
-    end
+    #def select(dish)
+     #   @selected_dishes << dish
+    #end
     def total
         total_sum = 0
         @selected_dishes.each do |x|
