@@ -21,7 +21,9 @@ describe Takeaway do
             it 'shows the bill' do
                 expect(restaurant).to respond_to(:bill)
             end
-
+            it 'raises an error when the order is empty' do
+                expect{ restaurant.bill }.to raise_error 'Please select your meal'
+            end
         end
     
         it 'places the order' do
