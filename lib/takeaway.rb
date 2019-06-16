@@ -9,11 +9,12 @@ class Takeaway
         menu.calculator.sum
     end
     def bill
+        fail 'Please select your meal' if menu.order.empty? == true
         puts menu.order
         "Amount to pay: #{total}"
     end
     def place_order
-        fail 'Please select your meal' if menu.order == nil
+        fail 'Please select your meal' if menu.order.empty? == true
         require_relative 'sms.rb'
         bill
     end

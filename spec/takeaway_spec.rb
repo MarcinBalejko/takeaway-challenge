@@ -17,11 +17,19 @@ describe Takeaway do
             restaurant.menu.select(dish)
             expect(restaurant.total).to eq(restaurant.menu.calculator.sum)
         end
+        describe '#bill' do
+            it 'shows the bill' do
+                expect(restaurant).to respond_to(:bill)
+            end
+
+        end
+    
         it 'places the order' do
             restaurant.menu.select(dish)
             allow(restaurant).to receive(:require_relative)
             restaurant.place_order
         end
+    
 
     end
 
