@@ -4,14 +4,13 @@ class Takeaway
     def initialize(menu = Menu.new)
         @menu = menu       
         @your_order = menu.order
-
     end
     def total
         menu.calculator.sum
     end
     def bill
         puts menu.order
-        "Amount to pay: #{ total }"
+        "Amount to pay: #{total}"
     end
     def place_order
         fail 'Please select your meal' if menu.order == nil
