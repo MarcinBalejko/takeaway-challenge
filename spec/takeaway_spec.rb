@@ -25,14 +25,16 @@ describe Takeaway do
                 expect{ restaurant.bill }.to raise_error 'Please select your meal'
             end
         end
-    
-        it 'places the order' do
-            restaurant.menu.select(dish)
-            allow(restaurant).to receive(:require_relative)
-            restaurant.place_order
+        describe '#place_order' do
+            it 'places the order' do
+                restaurant.menu.select(dish)
+                allow(restaurant).to receive(:require_relative)
+                restaurant.place_order
+            end
+            it 'raises an error when the order is empty' do
+            expect{ restaurant.place_order }.to raise_error 'Please select your meal'
+            end
         end
-    
-
     end
 
 end
